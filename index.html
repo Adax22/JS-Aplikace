@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasy Generátor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h1>Fantasy Generátor</h1>
+    
+    <select id="typeSelect">
+        <optgroup label="Jména rasy">
+            <option value="elf">Elf</option>
+            <option value="trpaslik">Trpaslík</option>
+            <option value="vlkodlak">Vlkodlak</option>
+            <option value="upir">Upír</option>
+            <option value="kouzelnik">Kouzelník</option>
+            <option value="ork">Ork</option>
+        </optgroup>
+        <optgroup label="Detaily">
+            <option value="puvod">Původ a domovina</option>
+            <option value="tajemstvi">Temné tajemství</option>
+        </optgroup>
+    </select>
+    
+    <button id="generateBtn" disabled>Načítám...</button>
+
+    <div class="result" id="resultDisplay">Čekám na data ze serveru...</div>
+
+    <div class="history-section">
+        <h3>Poslední nálezy</h3>
+        <ul id="historyList"></ul>
+        <button id="clearBtn" class="historyBtn">Smazat historii</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

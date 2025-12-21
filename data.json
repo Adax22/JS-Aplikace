@@ -1,0 +1,51 @@
+{
+  "elf": { 
+    "type": "combine", 
+    "prefix": ["Ael", "Elen", "Fael", "Sylv", "Thal", "Gal", "Luth"], 
+    "suffix": ["dorn", "rion", "aen", "on", "thir", "iel", "val"] 
+  },
+  
+  "trpaslik": { 
+    "type": "combine", 
+    "prefix": ["Thor", "Brim", "Dwal", "Thrain", "Gloin", "Bal"], 
+    "suffix": ["gar", "li", "in", "dur", "mund", "bor"] 
+  },
+  
+  "vlkodlak": { 
+    "type": "combine", 
+    "prefix": ["Šedý", "Noční", "Divoký", "Krvavý", "Lesní", "Měsíční"], 
+    "suffix": ["pazour", "tesák", "dráp", "lovec", "běs", "stín"] 
+  },
+  
+  "upir": { 
+    "type": "list",
+    "items": ["Valerius", "Isadora", "Malachai", "Carmilla", "Viktor", 
+    "Eleonora", "Dracul", "Seraphina"] 
+  },
+  
+  "kouzelnik": { 
+    "type": "list", 
+    "items": ["Alatar", "Morgath", "Xandor", "Zelenius", "Archibald", 
+    "Mystra", "Thoth"] 
+  },
+
+  "ork": { 
+    "type": "combine", 
+    "prefix": ["Gor", "Thok", "Brak", "Zug", "Mog", "Ruk"], 
+    "suffix": ["thar", "gash", "mok", "zug", "nak", "dush"] 
+  },
+
+
+  "puvod": { 
+    "type": "list", 
+    "items": ["Železný vrch", "Mlžné údolí", "Zlatý přístav", "Hluboké hvozdy",
+     "Podmořské jeskyně", "Pustina stínů", "Císařství slunce", "Ledová citadela"] 
+  },
+  
+  "tajemstvi": { 
+  "type": "list", 
+  "items": ["Vlastním prokletý medailon", "Utekl jsem z královského vězení", 
+  "Můj předek byl drak", "Slyším hlasy v cizím jazyce", 
+  "Ukradl jsem artefakt mocnému cechu"] 
+  }
+}
