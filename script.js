@@ -45,12 +45,16 @@ function generateSingle() {
 // Režim: Kompletní hrdina
 function generateHero() {
     if (!cacheData) return;
-    const race = document.getElementById('heroRaceSelect').value;
+
+    const raceSelect = document.getElementById('heroRaceSelect');
+    const raceValue = raceSelect.value;
+    const raceText = raceSelect.options[raceSelect.selectedIndex].text;
     
     const name = getRandomValue(race);
     const origin = getRandomValue('puvod');
     const secret = getRandomValue('tajemstvi');
 
+    document.getElementById('heroRaceDisplay').textContent = raceText;
     document.getElementById('heroName').textContent = name;
     document.getElementById('heroOrigin').textContent = origin;
     document.getElementById('heroSecret').textContent = secret;
