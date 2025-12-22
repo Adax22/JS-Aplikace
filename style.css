@@ -126,15 +126,14 @@ li {
     border-radius: 0;
     box-shadow: none !important;
     transition: all 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .mode-switcher button.active-mode {
-    color: #3498db;
     border-bottom: 2px solid #3498db;
     font-weight: bold;
 }
 
 .mode-switcher button:hover:not(.active-mode) {
-    color: #3498db;
     border-bottom: 2px solid #bdc3c7;
 }
