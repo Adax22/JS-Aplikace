@@ -7,15 +7,15 @@
 </head>
 <body>
 
-<header class="box">
+<div class="box">
     <h1>Fantasy Generátor</h1>
     
-    <section class="mode-switcher">
+    <div class="mode-switcher">
         <button id="btnShowSingle" class="active-mode">Jednotlivě</button>
         <button id="btnShowHero">Vytvořit hrdinu</button>
-    </section>
+    </div>
     
-    <section id="sectionSingle">
+    <div id="sectionSingle">
         <select id="typeSelect">
             <optgroup label="Jména rasy">
                 <option value="elf">Elf</option>
@@ -32,9 +32,9 @@
         </select>
         <button id="generateBtn" disabled>Načítám...</button>
         <div class="result" id="resultDisplay">Čekám na data ze serveru...</div>
-    </section>
+    </div>
 
-    <section id="sectionHero" style="display: none;">
+    <div id="sectionHero" style="display: none;">
         <select id="heroRaceSelect">
             <optgroup label="Jména rasy">
                 <option value="elf">Elf</option>
@@ -53,14 +53,14 @@
             <p><strong>Původ:</strong>&nbsp;<span id="heroOrigin">-</span> <button onclick="reroll('origin')" class="small-btn">🔄</button></p>
             <p><strong>Tajemství:</strong>&nbsp;<span id="heroSecret">-</span> <button onclick="reroll('secret')" class="small-btn">🔄</button></p>
         </div>
-    </section>
+    </div>
 
-    <section class="history-section">
+    <div class="history-section">
         <h3>Poslední nálezy</h3>
         <ul id="historyList"></ul>
         <button id="clearBtn" class="historyBtn">Smazat historii</button>
-    </section>
-</header>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
