@@ -52,10 +52,21 @@ li {
 }
 
 .small-btn {
-    padding: 2px 8px;
-    font-size: 0.7rem;
+    padding: 5px 10px;
+    font-size: 0.9rem;
     background: #95a5a6;
-    margin-left: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#sectionHero p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 8px;
+    text-align: left;
 }
 
 .hero-card {
@@ -65,6 +76,11 @@ li {
     border: 1px solid #ddd;
     border-radius: 8px;
     background: #fffdf9;
+}
+
+.hero-card span {
+    margin-right: 10px;
+    flex-grow: 1;
 }
 
 .active-mode {
