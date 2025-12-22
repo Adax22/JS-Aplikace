@@ -8,14 +8,10 @@ async function loadData() {
         
         cacheData = await response.json();
         
-        // Úspěšné načtení - aktualizace UI
         document.getElementById('resultDisplay').textContent = "Připraveno ke generování";
         document.getElementById('generateBtn').disabled = false;
         document.getElementById('generateBtn').textContent = "Generovat!";
-        
-        // Pokud tlačítko pro hrdinu existuje (v tvém HTML je), aktivujeme ho
-        const heroBtn = document.getElementById('generateHeroBtn');
-        if (heroBtn) heroBtn.disabled = false;
+        document.getElementById('generateHeroBtn').disabled = false;
 
     } catch (error) {
         document.getElementById('resultDisplay').textContent = "Chyba při načítání dat.";
@@ -37,7 +33,7 @@ function getRandomValue(type) {
     }
 }
 
-// Logika pro jednotlivé generování
+// Režim: Jednotlivě
 function generateSingle() {
     if (!cacheData) return;
     const type = document.getElementById('typeSelect').value;
@@ -46,7 +42,7 @@ function generateSingle() {
     addToHistory(result);
 }
 
-// Logika pro vytvoření hrdiny (atributy)
+// Režim: Kompletní hrdina
 function generateHero() {
     if (!cacheData) return;
     const race = document.getElementById('heroRaceSelect').value;
@@ -62,7 +58,7 @@ function generateHero() {
     addToHistory(`Hrdina: ${name} (${race})`);
 }
 
-// Funkce pro "přetočení" (Reroll) - volaná z HTML přes onclick
+// Funkce reroll (musí být v window, aby fungovala z HTML)
 window.reroll = function(part) {
     if (!cacheData) return;
     if (part === 'name') {
@@ -75,7 +71,22 @@ window.reroll = function(part) {
     }
 };
 
-// Local Storage a Historie
+// Přepínání sekcí
+document.getElementById('btnShowSingle').onclick = () => {
+    document.getElementById('sectionSingle').style.display = 'block';
+    document.getElementById('sectionHero').style.display = 'none';
+    document.getElementById('btnShowSingle').classList.add('active-mode');
+    document.getElementById('btnShowHero').classList.remove('active-mode');
+};
+
+document.getElementById('btnShowHero').onclick = () => {
+    document.getElementById('sectionSingle').style.display = 'none';
+    document.getElementById('sectionHero').style.display = 'block';
+    document.getElementById('btnShowHero').classList.add('active-mode');
+    document.getElementById('btnShowSingle').classList.remove('active-mode');
+};
+
+// Local Storage
 function addToHistory(item) {
     let history = JSON.parse(localStorage.getItem('fantasyHistory')) || [];
     history.unshift(item);
@@ -91,20 +102,13 @@ function renderHistory() {
     listElement.innerHTML = history.map(item => `<li>${item}</li>`).join('');
 }
 
-// Event Listenery
+// Události
 document.getElementById('generateBtn').addEventListener('click', generateSingle);
-
-// Kontrola existence tlačítka pro hrdinu (aby kód nespadl, pokud ho v HTML schováš)
-const heroBtn = document.getElementById('generateHeroBtn');
-if (heroBtn) {
-    heroBtn.addEventListener('click', generateHero);
-}
-
+document.getElementById('generateHeroBtn').addEventListener('click', generateHero);
 document.getElementById('clearBtn').addEventListener('click', () => {
     localStorage.removeItem('fantasyHistory');
     renderHistory();
 });
 
-// Inicializace
 loadData();
 renderHistory();

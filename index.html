@@ -10,23 +10,30 @@
 <div class="box">
     <h1>Fantasy Generátor</h1>
     
-    <select id="typeSelect">
-        <optgroup label="Jména rasy">
-            <option value="elf">Elf</option>
-            <option value="trpaslik">Trpaslík</option>
-            <option value="vlkodlak">Vlkodlak</option>
-            <option value="upir">Upír</option>
-            <option value="kouzelnik">Kouzelník</option>
-            <option value="ork">Ork</option>
-        </optgroup>
-        <optgroup label="Detaily">
-            <option value="puvod">Původ a domovina</option>
-            <option value="tajemstvi">Temné tajemství</option>
-        </optgroup>
-    </select>
+    <div style="margin-bottom: 20px;">
+        <button id="btnShowSingle" class="active-mode">Jednotlivě</button>
+        <button id="btnShowHero">Vytvořit hrdinu</button>
+    </div>
     
-    <button id="generateBtn" disabled>Načítám...</button>
-    <div class="result" id="resultDisplay">Čekám na data ze serveru...</div>
+    <div id="sectionSingle">
+        <select id="typeSelect">
+            <optgroup label="Jména rasy">
+                <option value="elf">Elf</option>
+                <option value="trpaslik">Trpaslík</option>
+                <option value="vlkodlak">Vlkodlak</option>
+                <option value="upir">Upír</option>
+                <option value="kouzelnik">Kouzelník</option>
+                <option value="ork">Ork</option>
+            </optgroup>
+            <optgroup label="Detaily">
+                <option value="puvod">Původ a domovina</option>
+                <option value="tajemstvi">Temné tajemství</option>
+            </optgroup>
+        </select>
+        
+        <button id="generateBtn" disabled>Načítám...</button>
+        <div class="result" id="resultDisplay">Čekám na data ze serveru...</div>
+    </div>
 
     <div id="sectionHero" style="display: none;">
         <select id="heroRaceSelect">
@@ -35,8 +42,9 @@
             <option value="vlkodlak">Vlkodlak</option>
             <option value="upir">Upír</option>
             <option value="kouzelnik">Kouzelník</option>
+            <option value="ork">Ork</option>
         </select>
-        <button id="generateHeroBtn">Vytvořit všechny atributy!</button>
+        <button id="generateHeroBtn" disabled>Vytvořit všechny atributy!</button>
 
         <div class="hero-card">
             <p><strong>Jméno:</strong> <span id="heroName">-</span> <button onclick="reroll('name')" class="small-btn">🔄</button></p>
