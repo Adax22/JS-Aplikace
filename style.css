@@ -131,16 +131,3 @@ li {
 #generateHeroBtn {
     vertical-align: middle; 
 }
-
-#typeSelect {
-    padding: 20px 5px; 
-    min-width: 200px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: middle;     
-}
-
-#generateBtn {
-    vertical-align: middle; 
-}
