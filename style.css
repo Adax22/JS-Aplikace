@@ -144,11 +144,3 @@ li {
 #generateBtn {
     vertical-align: middle; 
 }
-
-#heroRaceSelect:focus {
-    outline: none;
-}
-
-#typeSelect:focus {
-    outline: none;
-}
