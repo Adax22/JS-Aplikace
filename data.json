@@ -31,8 +31,8 @@
 
   "ork": { 
     "type": "combine", 
-    "prefix": ["Gor", "Thok", "Brak", "Zug", "Mog", "Ruk"], 
-    "suffix": ["thar", "gash", "mok", "zug", "nak", "dush"] 
+    "prefix": ["Gor", "Thok", "Brak", "Zug", "Mog", "Ruk", "Grom", "Gar", "Ur", "Throk"], 
+    "suffix": ["thar", "gash", "mok", "zug", "nak", "dush", "mash", "bash", "gar"] 
   },
 
 
