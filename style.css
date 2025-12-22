@@ -20,20 +20,37 @@ body {
     margin: 20px 0; 
     min-height: 1.6em; 
 }
-        
-button { 
+
+#generateBtn, #generateHeroBtn { 
     padding: 10px 20px; 
     cursor: pointer; 
     background: #3498db; 
     color: white; 
     border: none; 
-    border-radius: 4px; 
+    border-radius: 4px;
+    vertical-align: middle;
 }
-        
-button:disabled { 
+
+#generateBtn:disabled, #generateHeroBtn:disabled { 
     background: #bdc3c7; 
 }
-        
+
+#typeSelect, #heroRaceSelect {
+    padding: 10px 15px; 
+    min-width: 200px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    vertical-align: middle; 
+    font-size: 1rem;
+    outline: none;
+}
+
+#typeSelect:focus, #heroRaceSelect:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
 ul { 
     list-style: none; 
     padding: 0; 
@@ -49,12 +66,19 @@ li {
     background: #e74c3c; 
     padding: 5px 10px;
     font-size: 0.8rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .small-btn {
     padding: 5px 10px;
     font-size: 0.9rem;
     background: #95a5a6;
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -84,11 +108,6 @@ li {
     flex-grow: 1;
 }
 
-.active-mode {
-    background: #2c3e50 !important;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
-}
-
 .mode-switcher {
     margin-bottom: 25px;
     display: flex;
@@ -107,27 +126,15 @@ li {
     border-radius: 0;
     box-shadow: none !important;
     transition: all 0.3s ease;
-    margin-bottom: 15px;
 }
 
 .mode-switcher button.active-mode {
+    color: #3498db;
     border-bottom: 2px solid #3498db;
     font-weight: bold;
 }
 
 .mode-switcher button:hover:not(.active-mode) {
+    color: #3498db;
     border-bottom: 2px solid #bdc3c7;
-}
-
-#heroRaceSelect {
-    padding: 20px 5px; 
-    min-width: 200px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    cursor: pointer;
-    vertical-align: middle; 
-}
-
-#generateHeroBtn {
-    vertical-align: middle; 
 }
