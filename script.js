@@ -18,6 +18,64 @@ async function loadData() {
     }
 }
 
+// Přepínání režimů
+document.getElementById('modeSingle').onclick = () => {
+    document.getElementById('sectionSingle').style.display = 'block';
+    document.getElementById('sectionHero').style.display = 'none';
+    document.getElementById('modeSingle').classList.add('active-mode');
+    document.getElementById('modeHero').classList.remove('active-mode');
+};
+
+document.getElementById('modeHero').onclick = () => {
+    document.getElementById('sectionSingle').style.display = 'none';
+    document.getElementById('sectionHero').style.display = 'block';
+    document.getElementById('modeHero').classList.add('active-mode');
+    document.getElementById('modeSingle').classList.remove('active-mode');
+};
+
+// Pomocná funkce pro získání náhodného řetězce z kategorií
+function getRandomValue(type) {
+    const category = cacheData[type];
+    if (category.type === "combine") {
+        const pre = category.prefix[Math.floor(Math.random() * category.prefix.length)];
+        const suf = category.suffix[Math.floor(Math.random() * category.suffix.length)];
+        return pre + suf;
+    } else {
+        return category.items[Math.floor(Math.random() * category.items.length)];
+    }
+}
+
+// Generování celého hrdiny
+document.getElementById('generateHeroBtn').onclick = () => {
+    const race = document.getElementById('heroRaceSelect').value;
+    const name = getRandomValue(race);
+    const origin = getRandomValue('puvod');
+    const secret = getRandomValue('tajemstvi');
+
+    document.getElementById('heroName').textContent = name;
+    document.getElementById('heroOrigin').textContent = origin;
+    document.getElementById('heroSecret').textContent = secret;
+    
+    addToHistory(`Hrdina: ${name} (${race}), původem z ${origin}`);
+};
+
+// Funkce pro změnu pouze jedné části (reroll)
+function reroll(part) {
+    if (!cacheData) return;
+    let newValue = "";
+    if (part === 'name') {
+        const race = document.getElementById('heroRaceSelect').value;
+        newValue = getRandomValue(race);
+        document.getElementById('heroName').textContent = newValue;
+    } else if (part === 'origin') {
+        newValue = getRandomValue('puvod');
+        document.getElementById('heroOrigin').textContent = newValue;
+    } else if (part === 'secret') {
+        newValue = getRandomValue('tajemstvi');
+        document.getElementById('heroSecret').textContent = newValue;
+    }
+}
+
 // 2. Logika generování (Upraveno pro nový JSON a více kategorií)
 function generate() {
     if (!cacheData) return;
