@@ -65,7 +65,7 @@ li {
     align-items: center;
     margin: 15px 0;
     border-bottom: 1px dashed #ccc;
-    padding-bottom: 8px;
+    padding: 4px;
     text-align: left;
 }
 
