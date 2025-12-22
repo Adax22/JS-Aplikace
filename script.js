@@ -44,13 +44,13 @@ function generateSingle() {
 
 // Režim: Kompletní hrdina
 function generateHero() {
-    if (!cacheData) return;
-
+if (!cacheData) return;
+    
     const raceSelect = document.getElementById('heroRaceSelect');
     const raceValue = raceSelect.value;
     const raceText = raceSelect.options[raceSelect.selectedIndex].text;
     
-    const name = getRandomValue(race);
+    const name = getRandomValue(raceValue);
     const origin = getRandomValue('puvod');
     const secret = getRandomValue('tajemstvi');
 
@@ -59,10 +59,9 @@ function generateHero() {
     document.getElementById('heroOrigin').textContent = origin;
     document.getElementById('heroSecret').textContent = secret;
     
-    addToHistory(`Hrdina: ${name} (${race})`);
+    addToHistory(`Hrdina: ${name} (${raceText})`);
 }
 
-// Funkce reroll (musí být v window, aby fungovala z HTML)
 window.reroll = function(part) {
     if (!cacheData) return;
     if (part === 'name') {
