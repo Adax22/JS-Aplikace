@@ -105,6 +105,35 @@ function renderHistory() {
     listElement.innerHTML = history.map(item => `<li>${item}</li>`).join('');
 }
 
+// Funkce pro stažení hrdiny (stále stejná logika)
+function downloadHero() {
+    const race = document.getElementById('heroRaceDisplay').textContent;
+    const name = document.getElementById('heroName').textContent;
+    const origin = document.getElementById('heroOrigin').textContent;
+    const secret = document.getElementById('heroSecret').textContent;
+
+    if (name === "-") {
+        return alert("Nejdříve vygeneruj hrdinu!");
+    }
+
+    const content = `--- FANTASY HRDINA ---\n\n` +
+                    `Rasa: ${race}\n` +
+                    `Jméno: ${name}\n` +
+                    `Původ: ${origin}\n` +
+                    `Tajemství: ${secret}\n\n`;
+                        
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = `Hrdina.txt`;
+    link.click();
+
+    // Vyčistíme paměť
+    URL.revokeObjectURL(url);
+}
+
 // Události
 document.getElementById('generateBtn').addEventListener('click', generateSingle);
 document.getElementById('generateHeroBtn').addEventListener('click', generateHero);
@@ -112,6 +141,7 @@ document.getElementById('clearBtn').addEventListener('click', () => {
     localStorage.removeItem('fantasyHistory');
     renderHistory();
 });
+document.getElementById('downloadHeroBtn').addEventListener('click', downloadHero);
 
 loadData();
 renderHistory();
