@@ -171,11 +171,11 @@ function downloadDDHero() {
     const cha = document.getElementById('stat-cha').value;
 
     const content = `--- D&D CHARACTER SHEET (2014) ---\n\n` +
-                    `Jméno: ${name}\n` +
-                    `Rasa: ${race}\n` +
-                    `Povolání: ${profession}\n` +
-                    `Přesvědčení: ${alignment}\n\n` +
-                    `--- STATISTIKY ---\n` +
+                    `Name: ${name}\n` +
+                    `Race: ${race}\n` +
+                    `Class: ${profession}\n` +
+                    `Alignment: ${alignment}\n\n` +
+                    `--- STATS ---\n` +
                     `STR: ${str} | DEX: ${dex} | CON: ${con}\n` +
                     `INT: ${int} | WIS: ${wis} | CHA: ${cha}\n\n` +
                     `--- BACKSTORY ---\n` +
