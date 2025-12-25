@@ -35,7 +35,64 @@
     "suffix": ["thar", "gash", "mok", "zug", "nak", "dush", "mash", "bash", "gar"] 
   },
 
+  "goblin": {
+      "type": "combine",
+      "prefix": ["Griz", "Rat", "Zog", "Mork", "Snag", "Grak", "Briz", "Klog"],
+      "suffix": ["nose", "it", "luk", "gak", "snat", " eye", "fang", "gut"]
+  },
 
+  "hobbit": {
+      "type": "combine",
+      "prefix": ["Bungo", "Bil", "Fro", "Pere", "Me", "Sam", "Pipp", "To", "Bar"],
+      "suffix": ["do", "bo", "grin", "ry", "wise", "pi", "ladin", "dy", "mír"]
+  },
+
+  "demon": {
+      "type": "combine",
+      "prefix": ["Mal", "Xan", "Bel", "Astar", "Mor", "Vaal", "Gorg", "Dra"],
+      "suffix": ["och", "thos", "ial", "phegor", "moth", "ax", "rek", "zar"]
+  },
+
+  "dryada": {
+      "type": "combine",
+      "prefix": ["Lyra", "Syl", "Flo", "Leaf", "Oak", "Mel", "Dry", "Ana"],
+      "suffix": ["na", "via", "ra", "wyn", "ia", "thea", "belle", "sha"]
+  },
+
+  "golem": {
+      "type": "list",
+      "items": ["Jednotka 01", "Strážce VII", "Monolit", "Balvan", "Křemen", "Golem Alpha", "Pevnost", "Ochránce", "Kolos"]
+  },
+
+  "drakorozeny": {
+    "type": "combine",
+    "prefix": ["Arkan", "Bal", "Dona", "Ghesh", "Kriv", "Med", "Pat", "Rhesh"],
+    "suffix": ["ar", "ash", "inn", "rash", "gar", "hen", "rin", "vax"]
+  },
+  
+  "clovek": {
+      "type": "combine",
+      "prefix": ["Al", "Bar", "Ed", "Gar", "Luc", "Os", "Row", "Tho"],
+      "suffix": ["eric", "ton", "mond", "vard", "as", "win", "an", "mas"]
+  },
+
+  "obr": {
+      "type": "list",
+      "items": ["Hromovládce", "Drtič skal", "Mračno", "Ledový tesák", "Hora", "Kamenný strážce", "Zemský obr", "Titán", "Pustina", "Goliáš"]
+  },
+
+  "skret": {
+    "type": "combine",
+    "prefix": ["Ugl", "Shagr", "Grish", "Gor", "Lurtz", "Mau", "Bol", "Az"],
+    "suffix": ["uk", "at", "nakh", "bag", "hur", "mog", "gush", "gog"]
+  },
+
+  "ent": {
+      "type": "list",
+      "items": ["Stromovous", "Listovlas", "Sukovitý kmen", "Starý buk", "Kořenáč", "Dubová kůra", "Rychlý šíp", "Lesní stín", "Prastarý jilm", "Moudrý cedr"]
+  },
+
+  
   "puvod": { 
     "type": "list", 
     "items": ["Železný vrch", "Mlžné údolí", "Zlatý přístav", "Hluboké hvozdy",
