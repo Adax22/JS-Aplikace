@@ -78,14 +78,24 @@
   
   "puvod": { 
     "type": "list", 
-    "items": ["Železný vrch", "Mlžné údolí", "Zlatý přístav", "Hluboké hvozdy",
-     "Podmořské jeskyně", "Pustina stínů", "Císařství slunce", "Ledová citadela"] 
+    "items": [
+      "Železný vrch", "Mlžné údolí", "Zlatý přístav", "Hluboké hvozdy",
+      "Podmořské jeskyně", "Pustina stínů", "Císařství slunce", "Ledová citadela",
+      "Zapomenutá sféra", "Dračí hnízdo", "Srdce pralesa", "Kamenné město",
+      "Opuštěné opatství", "Vulkanické ostrovy", "Plovoucí ostrovy", "Podsvětí"
+    ] 
   },
   
   "tajemstvi": { 
   "type": "list", 
-  "items": ["Vlastním prokletý medailon", "Utekl jsem z královského vězení", 
-  "Můj předek byl drak", "Slyším hlasy v cizím jazyce", 
-  "Ukradl jsem artefakt mocnému cechu"] 
+  "items": [
+      "Vlastním prokletý medailon", "Utekl jsem z královského vězení", 
+      "Můj předek byl drak", "Slyším hlasy v cizím jazyce", 
+      "Ukradl jsem artefakt mocnému cechu", "Hledá mě nájemný lovec",
+      "Jsem poslední svého druhu", "V mých žilách koluje krev bohů",
+      "Můj stín žije vlastním životem", "Znám polohu ztraceného města",
+      "Podepsal jsem smlouvu s ďáblem", "Moje vzpomínky jsou falešné",
+      "V noci se měním v něco jiného", "Zradil jsem svou rodnou víru"
+    ]
   }
 }
