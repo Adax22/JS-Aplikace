@@ -154,6 +154,45 @@ function downloadHero() {
     URL.revokeObjectURL(url);
 }
 
+// Funkce pro stažení D&D postavy
+function downloadDDHero() {
+    const name = document.getElementById('ddName').value || "Bezejmenný hrdina";
+    const race = document.getElementById('ddRace').value || "-";
+    const profession = document.getElementById('ddClass').value || "-";
+    const alignment = document.getElementById('ddAlignment').value || "-";
+    const backstory = document.getElementById('ddBackstory').value || "Žádný příběh nebyl napsán.";
+
+    // Statistiky
+    const str = document.getElementById('stat-str').value;
+    const dex = document.getElementById('stat-dex').value;
+    const con = document.getElementById('stat-con').value;
+    const int = document.getElementById('stat-int').value;
+    const wis = document.getElementById('stat-wis').value;
+    const cha = document.getElementById('stat-cha').value;
+
+    const content = `--- D&D CHARACTER SHEET (2014) ---\n\n` +
+                    `Jméno: ${name}\n` +
+                    `Rasa: ${race}\n` +
+                    `Povolání: ${profession}\n` +
+                    `Přesvědčení: ${alignment}\n\n` +
+                    `--- STATISTIKY ---\n` +
+                    `STR: ${str} | DEX: ${dex} | CON: ${con}\n` +
+                    `INT: ${int} | WIS: ${wis} | CHA: ${cha}\n\n` +
+                    `--- BACKSTORY ---\n` +
+                    `${backstory}\n\n` +
+                    `Vygenerováno v aplikaci Fantasy Generátor.`;
+
+    const blob = new Blob([content], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+
+    link.href = url;
+    link.download = `DD_Hrdina_${name.replace(/\s+/g, '_')}.txt`;
+    link.click();
+
+    URL.revokeObjectURL(url);
+}
+
 // Události
 document.getElementById('generateBtn').addEventListener('click', generateSingle);
 document.getElementById('generateHeroBtn').addEventListener('click', generateHero);
@@ -162,6 +201,7 @@ document.getElementById('clearBtn').addEventListener('click', () => {
     renderHistory();
 });
 document.getElementById('downloadHeroBtn').addEventListener('click', downloadHero);
+document.getElementById('downloadDDBtn').addEventListener('click', downloadDDHero);
 
 loadData();
 renderHistory();
