@@ -179,15 +179,14 @@ function downloadDDHero() {
                     `STR: ${str} | DEX: ${dex} | CON: ${con}\n` +
                     `INT: ${int} | WIS: ${wis} | CHA: ${cha}\n\n` +
                     `--- BACKSTORY ---\n` +
-                    `${backstory}\n\n` +
-                    `Vygenerováno v aplikaci Fantasy Generátor.`;
+                    `${backstory}`;
 
     const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
 
     link.href = url;
-    link.download = `DD_Hrdina_${name.replace(/\s+/g, '_')}.txt`;
+    link.download = `DD_Hrdina.txt`;
     link.click();
 
     URL.revokeObjectURL(url);
