@@ -36,7 +36,7 @@ body {
 }
 
 #typeSelect, #heroRaceSelect {
-    padding: 10px 15px; 
+    padding: 6px 15px; 
     min-width: 200px; 
     border: 1px solid #ccc;
     border-radius: 4px;
