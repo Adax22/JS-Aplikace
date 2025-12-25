@@ -13,6 +13,7 @@
     <section class="mode-switcher">
         <button id="btnShowSingle" class="active-mode">Jednotlivě</button>
         <button id="btnShowHero">Vytvořit hrdinu</button>
+        <button id="btnShowDD">D&D 2014</button>
     </section>
     
     <section id="sectionSingle">
@@ -69,6 +70,68 @@
             <button id="downloadHeroBtn" class="download-btn">💾 Stáhnout postavu (.txt)</button>
         </div>
     </section>
+
+    <section id="sectionDD" style="display: none;">
+        <div class="dd-container">
+            <div class="dd-row">
+                <input type="text" id="ddName" placeholder="Jméno hrdiny" class="dd-input">
+                <select id="ddClass" class="dd-select">
+                    <option value="" disabled selected>Class</option>
+                    <option value="Barbarian">Barbarian</option>
+                    <option value="Bard">Bard</option>
+                    <option value="Cleric">Cleric</option>
+                    <option value="Druid">Druid</option>
+                    <option value="Fighter">Fighter</option>
+                    <option value="Monk">Monk</option>
+                    <option value="Paladin">Paladin</option>
+                    <option value="Ranger">Ranger</option>
+                    <option value="Rogue">Rogue</option>
+                    <option value="Sorcerer">Sorcerer</option>
+                    <option value="Warlock">Warlock</option>
+                    <option value="Wizard">Wizard</option>
+                </select>
+            </div>
+
+            <div class="dd-row">
+                <select id="ddRace" class="dd-select">
+                    <option value="" disabled selected>Race</option>
+                    <option value="Human">Human</option>
+                    <option value="Elf">Elf</option>
+                    <option value="Dwarf">Dwarf</option>
+                    <option value="Halfling">Halfling</option>
+                    <option value="Dragonborn">Dragonborn</option>
+                    <option value="Gnome">Gnome</option>
+                    <option value="Half-Elf">Half-Elf</option>
+                    <option value="Half-Orc">Half-Orc</option>
+                    <option value="Tiefling">Tiefling</option>
+                </select>
+                <select id="ddAlignment" class="dd-select">
+                    <option value="" disabled selected>Alignment</option>
+                    <option value="Lawful Good">Lawful Good</option>
+                    <option value="Neutral Good">Neutral Good</option>
+                    <option value="Chaotic Good">Chaotic Good</option>
+                    <option value="Lawful Neutral">Lawful Neutral</option>
+                    <option value="True Neutral">True Neutral</option>
+                    <option value="Chaotic Neutral">Chaotic Neutral</option>
+                    <option value="Lawful Evil">Lawful Evil</option>
+                    <option value="Neutral Evil">Neutral Evil</option>
+                    <option value="Chaotic Evil">Chaotic Evil</option>
+                </select>
+            </div>
+
+            <textarea id="ddBackstory" placeholder="Backstory (Příběh postavy)" class="dd-textarea"></textarea>
+
+            <div class="stats-grid">
+                <div class="stat-box">STR <input type="number" id="stat-str" value="10"> <button onclick="rollStat('str')">🎲</button></div>
+                <div class="stat-box">DEX <input type="number" id="stat-dex" value="10"> <button onclick="rollStat('dex')">🎲</button></div>
+                <div class="stat-box">CON <input type="number" id="stat-con" value="10"> <button onclick="rollStat('con')">🎲</button></div>
+                <div class="stat-box">INT <input type="number" id="stat-int" value="10"> <button onclick="rollStat('int')">🎲</button></div>
+                <div class="stat-box">WIS <input type="number" id="stat-wis" value="10"> <button onclick="rollStat('wis')">🎲</button></div>
+                <div class="stat-box">CHA <input type="number" id="stat-cha" value="10"> <button onclick="rollStat('cha')">🎲</button></div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="history-section">
         <h3>Poslední nálezy</h3>

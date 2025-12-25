@@ -44,7 +44,7 @@ function generateSingle() {
 
 // Režim: Kompletní hrdina
 function generateHero() {
-if (!cacheData) return;
+    if (!cacheData) return;
     
     const raceSelect = document.getElementById('heroRaceSelect');
     const raceValue = raceSelect.value;
@@ -74,19 +74,41 @@ window.reroll = function(part) {
     }
 };
 
-// Přepínání sekcí
-document.getElementById('btnShowSingle').onclick = () => {
-    document.getElementById('sectionSingle').style.display = 'block';
+// --- NOVÁ FUNKCE: Hod kostkou pro D&D sekci ---
+window.rollStat = function(statId) {
+    // Generuje náhodné číslo 1 až 20
+    const roll = Math.floor(Math.random() * 20) + 1;
+    document.getElementById('stat-' + statId).value = roll;
+};
+
+// --- AKTUALIZOVANÉ PŘEPÍNÁNÍ SEKCE ---
+
+function hideAllSections() {
+    document.getElementById('sectionSingle').style.display = 'none';
     document.getElementById('sectionHero').style.display = 'none';
-    document.getElementById('btnShowSingle').classList.add('active-mode');
+    document.getElementById('sectionDD').style.display = 'none';
+    
+    document.getElementById('btnShowSingle').classList.remove('active-mode');
     document.getElementById('btnShowHero').classList.remove('active-mode');
+    document.getElementById('btnShowDD').classList.remove('active-mode');
+}
+
+document.getElementById('btnShowSingle').onclick = () => {
+    hideAllSections();
+    document.getElementById('sectionSingle').style.display = 'block';
+    document.getElementById('btnShowSingle').classList.add('active-mode');
 };
 
 document.getElementById('btnShowHero').onclick = () => {
-    document.getElementById('sectionSingle').style.display = 'none';
+    hideAllSections();
     document.getElementById('sectionHero').style.display = 'block';
     document.getElementById('btnShowHero').classList.add('active-mode');
-    document.getElementById('btnShowSingle').classList.remove('active-mode');
+};
+
+document.getElementById('btnShowDD').onclick = () => {
+    hideAllSections();
+    document.getElementById('sectionDD').style.display = 'block';
+    document.getElementById('btnShowDD').classList.add('active-mode');
 };
 
 // Local Storage
@@ -105,7 +127,7 @@ function renderHistory() {
     listElement.innerHTML = history.map(item => `<li>${item}</li>`).join('');
 }
 
-// Funkce pro stažení hrdiny (stále stejná logika)
+// Funkce pro stažení hrdiny
 function downloadHero() {
     const race = document.getElementById('heroRaceDisplay').textContent;
     const name = document.getElementById('heroName').textContent;
@@ -129,8 +151,6 @@ function downloadHero() {
     link.href = url;
     link.download = `Hrdina.txt`;
     link.click();
-
-    // Vyčistíme paměť
     URL.revokeObjectURL(url);
 }
 
