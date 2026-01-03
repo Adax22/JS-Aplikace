@@ -214,3 +214,44 @@ li {
     font-size: 0.7rem;
     background: #7f8c8d;
 }
+
+
+
+@media screen and (max-width: 600px) {
+    .mode-switcher {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mode-switcher button {
+        margin-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    #typeSelect, #heroRaceSelect {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #generateBtn, #generateHeroBtn {
+        width: 100%;
+    }
+
+    .dd-row {
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #sectionHero p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .spacer38 {
+        display: none;
+    }
+}
