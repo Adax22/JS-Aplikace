@@ -100,7 +100,7 @@ li {
     text-align: left;
     margin-top: 20px;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #2c3e50;
     border-radius: 8px;
     background: #fffdf9;
 }
@@ -138,10 +138,6 @@ li {
 
 .mode-switcher button:hover:not(.active-mode) {
     border-bottom: 2px solid #bdc3c7;
-}
-
-.spacer38 {
-    width: 38px;
 }
 
 .download-btn {
