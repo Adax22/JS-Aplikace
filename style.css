@@ -254,12 +254,11 @@ li {
     }
 
     .small-btn {
-        width: 20%;         /* Na mobilu je lepší mít tlačítko trochu širší pro prst */
+        width: 20%;
         padding: 8px;
         margin-top: 5px;
     }
 
-    /* 4. Ostatní úpravy */
     .dd-row {
         flex-direction: column;
     }
