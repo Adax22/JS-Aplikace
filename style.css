@@ -245,7 +245,7 @@ li {
         flex-direction: column;
         align-items: center; /* Vycentruje text i tlačítko na střed */
         text-align: center;  /* Zarovná text (např. jméno) na střed */
-        gap: 10px;          /* Vytvoří jasnou mezeru mezi textem a tlačítkem 🔄 */
+        gap: 5px;          /* Vytvoří jasnou mezeru mezi textem a tlačítkem 🔄 */
         padding: 15px 0;
     }
 
@@ -254,8 +254,9 @@ li {
     }
 
     .small-btn {
-        width: 60%;         /* Na mobilu je lepší mít tlačítko trochu širší pro prst */
+        width: 20%;         /* Na mobilu je lepší mít tlačítko trochu širší pro prst */
         padding: 8px;
+        margin-top: 5px;
     }
 
     /* 4. Ostatní úpravy */
@@ -267,7 +268,4 @@ li {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .spacer38 {
-        display: none;
-    }
 }
