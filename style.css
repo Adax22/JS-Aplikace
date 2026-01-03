@@ -220,25 +220,46 @@ li {
 
 
 @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    /* 1. Oprava podtržení (už máš width: auto, to je správně) */
     .mode-switcher {
         flex-direction: column;
+        align-items: center;
         gap: 5px;
     }
 
     .mode-switcher button {
+        width: auto;
         margin-bottom: 5px;
         font-size: 1rem;
     }
 
-    #typeSelect, #heroRaceSelect {
+    /* 2. Oprava šířky prvků */
+    #typeSelect, #heroRaceSelect, #generateBtn, #generateHeroBtn {
         width: 100%;
         margin-bottom: 10px;
+        box-sizing: border-box; /* Zabrání přetékání selectu přes okraj boxu */
     }
 
-    #generateBtn, #generateHeroBtn {
-        width: 100%;
+    /* 3. Oprava odsazení rerollu a textu hrdiny */
+    #sectionHero p {
+        flex-direction: column;
+        align-items: center; /* Vycentruje text i tlačítko na střed */
+        text-align: center;  /* Zarovná text (např. jméno) na střed */
+        gap: 10px;          /* Vytvoří jasnou mezeru mezi textem a tlačítkem 🔄 */
+        padding: 15px 0;
     }
 
+    #sectionHero p span {
+        margin-right: 0;    /* Odstraní starý margin pro PC verzi */
+    }
+
+    .small-btn {
+        width: 60%;         /* Na mobilu je lepší mít tlačítko trochu širší pro prst */
+        padding: 8px;
+    }
+
+    /* 4. Ostatní úpravy */
     .dd-row {
         flex-direction: column;
     }
@@ -247,13 +268,8 @@ li {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #sectionHero p {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-
     .spacer38 {
         display: none;
     }
+}
 }
