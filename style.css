@@ -220,7 +220,6 @@ li {
 
 
 @media screen and (max-width: 600px) {
-@media screen and (max-width: 600px) {
     /* 1. Oprava podtržení (už máš width: auto, to je správně) */
     .mode-switcher {
         flex-direction: column;
