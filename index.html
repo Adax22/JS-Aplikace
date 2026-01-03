@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<header class="box">
+<header>
     <h1>Fantasy Generátor</h1>
     
     <section class="mode-switcher">
@@ -16,7 +16,8 @@
         <button id="btnShowHero">Vytvořit hrdinu</button>
         <button id="btnShowDD">D&D 2014</button>
     </section>
-    
+</header>
+<article>
     <section id="sectionSingle">
         <select id="typeSelect">
             <optgroup label="Jména rasy">
@@ -134,15 +135,15 @@
             <button id="downloadDDBtn" class="download-btn">💾 Stáhnout D&D postavu (.txt)</button>
         </div>
     </section>
-
-
+</article>
+<footer>
     <section class="history-section">
         <h3>Poslední nálezy</h3>
         <ul id="historyList"></ul>
         <button id="clearBtn" class="historyBtn">Smazat historii</button>
     </section>
-</header>
-
-<script src="script.js"></script>
+    
+    <script src="script.js"></script>
+</footer>
 </body>
 </html>
