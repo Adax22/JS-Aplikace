@@ -268,4 +268,7 @@ li {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .spacer38 {
+        display: none;
+    }
 }
