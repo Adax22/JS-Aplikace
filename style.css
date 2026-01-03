@@ -220,6 +220,16 @@ li {
 
 
 @media screen and (max-width: 600px) {
+    body {
+        margin: 10px auto;
+        padding: 5px;
+    }
+    
+    .box {
+        padding: 10px;
+        width: 100%;
+    }
+
     .mode-switcher {
         flex-direction: column;
         gap: 5px;
